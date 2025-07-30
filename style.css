@@ -266,21 +266,38 @@ img {
         font-weight: bold;
     }
 
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
-/* Responsive */
+/* Hide nav on mobile initially */
 @media (max-width: 768px) {
-    .hero-layout {
-        flex-direction: column;
-        text-align: center;
+    .hamburger {
+        display: block;
     }
 
-    .main-nav a {
-        margin-left: 1rem;
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        display: none;
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
     }
 
-    .testimonial-cards {
-        flex-direction: column;
-    }
+        .main-nav a {
+            margin: 0.5rem 0;
+        }
+
+        .main-nav.open {
+            display: flex;
+        }
 }
 
 
